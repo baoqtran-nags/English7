@@ -26,3 +26,5 @@ export interface UserAnswerRecord {
 }
 
 export type ActiveTab = 'quiz' | 'irregular_verbs' | 'tense_study' | 'ask_teacher';
+
+export type EyeCareTheme = 'warm' | 'sage' | 'night';

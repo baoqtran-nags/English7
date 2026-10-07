@@ -1,23 +1,69 @@
 @import "tailwindcss";
 
 @layer base {
+  :root {
+    --canvas-bg: #FAF7F2;
+    --card-bg: #FFFFFF;
+    --card-border: #EAE3D8;
+    --text-primary: #2C3338;
+    --text-secondary: #5C6773;
+    --accent-tint: #F3EFE6;
+  }
+
   body {
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: var(--canvas-bg);
+    color: var(--text-primary);
+    transition: background-color 0.25s ease, color 0.25s ease;
   }
+
   h1, h2, h3, h4, .font-heading {
     font-family: 'Lexend', system-ui, -apple-system, sans-serif;
   }
 }
 
-@keyframes pulseGlow {
-  0%, 100% {
-    box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
-  }
-  50% {
-    box-shadow: 0 0 25px rgba(59, 130, 246, 0.7);
-  }
+/* Eye-Care Warm Mode (Default: Soothing Cream / Paper Tint) */
+.theme-warm {
+  --canvas-bg: #FAF7F2;
+  --card-bg: #FFFFFF;
+  --card-border: #EAE3D8;
+  --text-primary: #2C3338;
+  --text-secondary: #5C6773;
+  --accent-tint: #F3EFE6;
 }
 
-.animate-pulse-glow {
-  animation: pulseGlow 2s infinite ease-in-out;
+/* Eye-Care Sage Mode (Gentle Green Tea / Reduced Retinal Fatigue) */
+.theme-sage {
+  --canvas-bg: #F2F6F3;
+  --card-bg: #FFFFFF;
+  --card-border: #DFE8E1;
+  --text-primary: #203328;
+  --text-secondary: #56685D;
+  --accent-tint: #E8F0EA;
+}
+
+/* Eye-Care Night Mode (Warm Charcoal Slate / Anti-Glare for Low Light) */
+.theme-night {
+  --canvas-bg: #1A2129;
+  --card-bg: #232C36;
+  --card-border: #333F4D;
+  --text-primary: #E5EAEE;
+  --text-secondary: #9DAAB8;
+  --accent-tint: #2B3642;
+}
+
+/* Custom Soft Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(140, 150, 165, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(140, 150, 165, 0.5);
 }
