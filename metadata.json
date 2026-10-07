@@ -1,0 +1,7 @@
+{
+  "name": "Trợ Lý Tiếng Anh Lớp 7 - Ôn Tập Ngữ Pháp & 100 Động Từ Bất Quy Tắc",
+  "description": "Trợ lý Giáo viên Tiếng Anh Lớp 7 AI cùng Thầy Thomas: Tạo đề ôn tập 15 câu thì Hiện tại đơn, Quá khứ đơn & Hiện tại tiếp diễn có chấm điểm giải thích chi tiết, ôn tập 100 động từ bất quy tắc có phát âm chuẩn V1-V2-V3.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
