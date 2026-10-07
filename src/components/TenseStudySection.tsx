@@ -11,8 +11,15 @@ import {
   Volume2
 } from 'lucide-react';
 import { pronounceSingle } from '../utils/speech.ts';
+import { EyeCareTheme } from '../types.ts';
 
-export const TenseStudySection: React.FC = () => {
+interface TenseStudySectionProps {
+  eyeCareTheme?: EyeCareTheme;
+}
+
+export const TenseStudySection: React.FC<TenseStudySectionProps> = ({
+  eyeCareTheme = 'warm'
+}) => {
   const [activeTab, setActiveTab] = useState<'present' | 'present_continuous' | 'past' | 'comparison' | 'ed_pronunciation'>('present');
 
   return (

@@ -21,9 +21,16 @@ import {
   Trash2
 } from 'lucide-react';
 import { IRREGULAR_VERBS_100, IrregularVerb } from '../data/irregularVerbs.ts';
+import { EyeCareTheme } from '../types.ts';
 import { pronounceThreeForms, pronounceSingle, stopSpeaking } from '../utils/speech.ts';
 
-export const IrregularVerbsSection: React.FC = () => {
+interface IrregularVerbsSectionProps {
+  eyeCareTheme?: EyeCareTheme;
+}
+
+export const IrregularVerbsSection: React.FC<IrregularVerbsSectionProps> = ({
+  eyeCareTheme = 'warm'
+}) => {
   // Search & Filters
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [selectedGroup, setSelectedGroup] = useState<string>('all');

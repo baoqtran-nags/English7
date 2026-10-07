@@ -14,15 +14,19 @@ import {
   RefreshCw,
   Info
 } from 'lucide-react';
-import { GrammarQuestion, UserAnswerRecord } from '../types.ts';
+import { GrammarQuestion, UserAnswerRecord, EyeCareTheme } from '../types.ts';
 import { CURATED_QUESTION_SETS, getRandomSet } from '../data/grammarBank.ts';
 import { TEACHER_THOMAS_AVATAR } from '../constants/assets.ts';
 
 interface QuizSectionProps {
   onAskTeacherWithContext?: (questionContext: string) => void;
+  eyeCareTheme?: EyeCareTheme;
 }
 
-export const QuizSection: React.FC<QuizSectionProps> = ({ onAskTeacherWithContext }) => {
+export const QuizSection: React.FC<QuizSectionProps> = ({ 
+  onAskTeacherWithContext,
+  eyeCareTheme = 'warm'
+}) => {
   // Current questions
   const [questions, setQuestions] = useState<GrammarQuestion[]>(() => getRandomSet());
   const [currentSetTitle, setCurrentSetTitle] = useState<string>("Bộ Đề Ôn Tập 15 Câu Chuẩn Lớp 7");
